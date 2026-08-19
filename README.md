@@ -15,3 +15,4 @@
 
 ## 🚀 Additional Feature (for enhance user experience):
 1. Loan List Screen: filter, sort, search and pull to refresh
+2. Loan Detail Screen: repayment progress(paid, percentage paid/amount), summary card (amount, interest rate, term, purpose, risk rating), send email (to borrower to remind with pre filled subject and body), share loan detail via other app (WA, Telegram, etc)

@@ -33,6 +33,14 @@
 		B5AD552F3035D0550015EE31 /* SeachLoansUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD552E3035D0550015EE31 /* SeachLoansUseCase.swift */; };
 		B5AD55313035D13F0015EE31 /* FilterLoansUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD55303035D1390015EE31 /* FilterLoansUseCase.swift */; };
 		B5AD55333035D1590015EE31 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD55323035D1590015EE31 /* LoadingView.swift */; };
+		B5AD5565303608680015EE31 /* LoanDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD5564303608680015EE31 /* LoanDetailViewController.swift */; };
+		B5AD5568303608880015EE31 /* LoanSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD5567303608880015EE31 /* LoanSummaryView.swift */; };
+		B5AD556A303608950015EE31 /* BorrowerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD5569303608950015EE31 /* BorrowerInfoView.swift */; };
+		B5AD556C303608E50015EE31 /* CollateralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD556B303608E50015EE31 /* CollateralView.swift */; };
+		B5AD556E303609070015EE31 /* RepaymentProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD556D303609070015EE31 /* RepaymentProgressView.swift */; };
+		B5AD5570303609100015EE31 /* PaymentScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD556F303609100015EE31 /* PaymentScheduleView.swift */; };
+		B5AD5572303609190015EE31 /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD5571303609190015EE31 /* DocumentView.swift */; };
+		B5AD557530360D970015EE31 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD557430360D970015EE31 /* CurrencyFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,24 +89,19 @@
 		B5AD552E3035D0550015EE31 /* SeachLoansUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachLoansUseCase.swift; sourceTree = "<group>"; };
 		B5AD55303035D1390015EE31 /* FilterLoansUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterLoansUseCase.swift; sourceTree = "<group>"; };
 		B5AD55323035D1590015EE31 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		B5AD5564303608680015EE31 /* LoanDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanDetailViewController.swift; sourceTree = "<group>"; };
+		B5AD5567303608880015EE31 /* LoanSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanSummaryView.swift; sourceTree = "<group>"; };
+		B5AD5569303608950015EE31 /* BorrowerInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorrowerInfoView.swift; sourceTree = "<group>"; };
+		B5AD556B303608E50015EE31 /* CollateralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollateralView.swift; sourceTree = "<group>"; };
+		B5AD556D303609070015EE31 /* RepaymentProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepaymentProgressView.swift; sourceTree = "<group>"; };
+		B5AD556F303609100015EE31 /* PaymentScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentScheduleView.swift; sourceTree = "<group>"; };
+		B5AD5571303609190015EE31 /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
+		B5AD557430360D970015EE31 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		B5AD55473035D7AD0015EE31 /* Exceptions for "ManloanTests" folder in "Compile Sources" phase from "ManloanTests" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = B5AD547C3035B7D80015EE31 /* Sources */;
-			membershipExceptions = (
-				"ManloanTests-Bridging-Header.h",
-			);
-		};
-/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B5AD54833035B7D80015EE31 /* ManloanTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				B5AD55473035D7AD0015EE31 /* Exceptions for "ManloanTests" folder in "Compile Sources" phase from "ManloanTests" target */,
-			);
 			path = ManloanTests;
 			sourceTree = "<group>";
 		};
@@ -159,6 +162,7 @@
 		B5AD54A43035BA020015EE31 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B5AD557330360D850015EE31 /* Utilities */,
 				B5AD54A53035BA170015EE31 /* Networking */,
 			);
 			path = Core;
@@ -203,9 +207,7 @@
 		B5AD54AA3035BA730015EE31 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				B5AD55303035D1390015EE31 /* FilterLoansUseCase.swift */,
-				B5AD552E3035D0550015EE31 /* SeachLoansUseCase.swift */,
-				B5AD552C3035D0410015EE31 /* SortLoansUseCase.swift */,
+				B5AD555E3035F9960015EE31 /* LoanList */,
 				B5AD54B63035BE6F0015EE31 /* FetchLoansUseCase.swift */,
 			);
 			path = UseCases;
@@ -248,6 +250,7 @@
 		B5AD54BC3035BEFB0015EE31 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B5AD55583035F8750015EE31 /* LoanDetail */,
 				B5AD54C93035C02F0015EE31 /* Common */,
 				B5AD54BD3035BF040015EE31 /* LoanList */,
 			);
@@ -331,6 +334,54 @@
 				B5AD54A73035BA420015EE31 /* Domain */,
 			);
 			path = Manloan;
+			sourceTree = "<group>";
+		};
+		B5AD55583035F8750015EE31 /* LoanDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B5AD55663036087F0015EE31 /* Views */,
+				B5AD55593035F8800015EE31 /* ViewController */,
+			);
+			path = LoanDetail;
+			sourceTree = "<group>";
+		};
+		B5AD55593035F8800015EE31 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B5AD5564303608680015EE31 /* LoanDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B5AD555E3035F9960015EE31 /* LoanList */ = {
+			isa = PBXGroup;
+			children = (
+				B5AD55303035D1390015EE31 /* FilterLoansUseCase.swift */,
+				B5AD552E3035D0550015EE31 /* SeachLoansUseCase.swift */,
+				B5AD552C3035D0410015EE31 /* SortLoansUseCase.swift */,
+			);
+			path = LoanList;
+			sourceTree = "<group>";
+		};
+		B5AD55663036087F0015EE31 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B5AD5571303609190015EE31 /* DocumentView.swift */,
+				B5AD556F303609100015EE31 /* PaymentScheduleView.swift */,
+				B5AD556D303609070015EE31 /* RepaymentProgressView.swift */,
+				B5AD556B303608E50015EE31 /* CollateralView.swift */,
+				B5AD5569303608950015EE31 /* BorrowerInfoView.swift */,
+				B5AD5567303608880015EE31 /* LoanSummaryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B5AD557330360D850015EE31 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B5AD557430360D970015EE31 /* CurrencyFormatter.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,6 +537,7 @@
 				B5AD55313035D13F0015EE31 /* FilterLoansUseCase.swift in Sources */,
 				B5AD54CC3035C0900015EE31 /* Constants.swift in Sources */,
 				B5AD54CE3035C0F50015EE31 /* EmptyStateView.swift in Sources */,
+				B5AD556A303608950015EE31 /* BorrowerInfoView.swift in Sources */,
 				B5AD55333035D1590015EE31 /* LoadingView.swift in Sources */,
 				B5AD552D3035D0480015EE31 /* SortLoansUseCase.swift in Sources */,
 				B5AD54CF3035C0F50015EE31 /* NetworkManager.swift in Sources */,
@@ -494,13 +546,20 @@
 				B5AD552F3035D0550015EE31 /* SeachLoansUseCase.swift in Sources */,
 				B5AD54D23035C0F50015EE31 /* LoanDTO.swift in Sources */,
 				B5AD54D33035C0F50015EE31 /* LoanRepositoryProtocol.swift in Sources */,
+				B5AD556E303609070015EE31 /* RepaymentProgressView.swift in Sources */,
+				B5AD5568303608880015EE31 /* LoanSummaryView.swift in Sources */,
+				B5AD556C303608E50015EE31 /* CollateralView.swift in Sources */,
 				B5AD54D43035C0F50015EE31 /* LoanCell.swift in Sources */,
+				B5AD5572303609190015EE31 /* DocumentView.swift in Sources */,
 				B5AD54D53035C0F50015EE31 /* FilterView.swift in Sources */,
 				B5AD54D63035C0F50015EE31 /* FetchLoansUseCase.swift in Sources */,
+				B5AD557530360D970015EE31 /* CurrencyFormatter.swift in Sources */,
+				B5AD5570303609100015EE31 /* PaymentScheduleView.swift in Sources */,
 				B5AD54D73035C0F50015EE31 /* Loan.swift in Sources */,
 				B5AD54D83035C0F50015EE31 /* LoanListViewModel.swift in Sources */,
 				B5AD54D93035C0F50015EE31 /* LoanRemoteDataSource.swift in Sources */,
 				B5AD54DA3035C0F50015EE31 /* NetworkLogger.swift in Sources */,
+				B5AD5565303608680015EE31 /* LoanDetailViewController.swift in Sources */,
 				B5AD55283035C4C50015EE31 /* AppContainer.swift in Sources */,
 				B5AD55293035C4C50015EE31 /* AppDelegate.swift in Sources */,
 				B5AD552A3035C4C50015EE31 /* SceneDelegate.swift in Sources */,
@@ -561,8 +620,9 @@
 				INFOPLIST_FILE = Manloan/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -592,8 +652,9 @@
 				INFOPLIST_FILE = Manloan/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -748,7 +809,7 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "ManloanTests/ManloanTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -773,7 +834,7 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "ManloanTests/ManloanTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

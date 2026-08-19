@@ -1,11 +1,9 @@
 //
 //  FetchLoansUseCaseTests.swift
-//  Manloan
+//  ManloanTests
 //
 //  Created by Muhammad Hamzah Robbani on 19/08/26.
 //
-
-
 
 import XCTest
 import Combine
