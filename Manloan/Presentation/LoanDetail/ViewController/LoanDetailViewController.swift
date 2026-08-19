@@ -167,7 +167,7 @@ final class LoanDetailViewController: UIViewController {
         
         progressView.configure(progress: progress, totalPaid: totalPaid, remaining: remaining)
         paymentScheduleView.configure(with: loan.repaymentSchedule.installments)
-        documentView.configure(with: loan.documents)
+        documentView.configure(with: loan.documents, parentViewController: self)
     }
     
     @objc private func handleShare() {
