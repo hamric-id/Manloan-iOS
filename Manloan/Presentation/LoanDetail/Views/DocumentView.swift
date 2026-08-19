@@ -28,13 +28,16 @@ final class DocumentView: UIView {
         return label
     }()
     
-    private let stackView: UIStackView = {
-        let sv = UIStackView()
-        sv.axis = .vertical
-        sv.spacing = 8
-        sv.distribution = .fill
-        sv.translatesAutoresizingMaskIntoConstraints = false
-        return sv
+    private let tableView: UITableView = {
+        let tv = UITableView()
+        tv.translatesAutoresizingMaskIntoConstraints = false
+        tv.register(DocumentCell.self, forCellReuseIdentifier: DocumentCell.identifier)
+        tv.isScrollEnabled = false
+        tv.separatorStyle = .singleLine
+        tv.backgroundColor = .clear
+        tv.separatorColor = .systemGray5
+        tv.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        return tv
     }()
     
     private let emptyStateLabel: UILabel = {
@@ -49,6 +52,7 @@ final class DocumentView: UIView {
     }()
     
     private var documents: [Document] = []
+    private var parentViewController: UIViewController?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -62,8 +66,11 @@ final class DocumentView: UIView {
     private func setupUI() {
         addSubview(containerView)
         containerView.addSubview(titleLabel)
-        containerView.addSubview(stackView)
+        containerView.addSubview(tableView)
         containerView.addSubview(emptyStateLabel)
+        
+        tableView.delegate = self
+        tableView.dataSource = self
         
         NSLayoutConstraint.activate([
             containerView.topAnchor.constraint(equalTo: topAnchor),
@@ -75,10 +82,11 @@ final class DocumentView: UIView {
             titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
             titleLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16),
             
-            stackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 12),
-            stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
-            stackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16),
-            stackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -16),
+            tableView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
+            tableView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 8),
+            tableView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -8),
+            tableView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -8),
+            tableView.heightAnchor.constraint(greaterThanOrEqualToConstant: 44),
             
             emptyStateLabel.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
             emptyStateLabel.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
@@ -87,96 +95,52 @@ final class DocumentView: UIView {
         ])
     }
     
-    func configure(with documents: [Document]) {
+    func configure(with documents: [Document], parentViewController: UIViewController? = nil) {
         self.documents = documents
-        
-        stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        self.parentViewController = parentViewController
         
         if documents.isEmpty {
             emptyStateLabel.isHidden = false
-            stackView.isHidden = true
+            tableView.isHidden = true
         } else {
             emptyStateLabel.isHidden = true
-            stackView.isHidden = false
+            tableView.isHidden = false
+            tableView.reloadData()
             
-            for (index, document) in documents.enumerated() {
-                let documentRow = createDocumentRow(document: document, index: index)
-                stackView.addArrangedSubview(documentRow)
-            }
+            let height = CGFloat(documents.count * 56)
+            tableView.heightAnchor.constraint(greaterThanOrEqualToConstant: height).isActive = true
         }
     }
-    
-    private func createDocumentRow(document: Document, index: Int) -> UIView {
-        let container = UIView()
-        container.translatesAutoresizingMaskIntoConstraints = false
-        container.tag = index          
-        let iconImageView = UIImageView()
-        iconImageView.image = UIImage(systemName: "doc.fill")
-        iconImageView.tintColor = .systemBlue
-        iconImageView.contentMode = .scaleAspectFit
-        iconImageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        let nameLabel = UILabel()
-        nameLabel.text = document.type
-        nameLabel.font = .systemFont(ofSize: 14, weight: .medium)
-        nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        let chevronImageView = UIImageView()
-        chevronImageView.image = UIImage(systemName: "chevron.right")
-        chevronImageView.tintColor = .systemGray3
-        chevronImageView.contentMode = .scaleAspectFit
-        chevronImageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleDocumentTap(_:)))
-        container.addGestureRecognizer(tapGesture)
-        container.isUserInteractionEnabled = true
-        
-        container.addSubview(iconImageView)
-        container.addSubview(nameLabel)
-        container.addSubview(chevronImageView)
-        
-        NSLayoutConstraint.activate([
-            container.heightAnchor.constraint(equalToConstant: 44),
-            
-            iconImageView.leadingAnchor.constraint(equalTo: container.leadingAnchor),
-            iconImageView.centerYAnchor.constraint(equalTo: container.centerYAnchor),
-            iconImageView.widthAnchor.constraint(equalToConstant: 20),
-            iconImageView.heightAnchor.constraint(equalToConstant: 24),
-            
-            nameLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: 12),
-            nameLabel.centerYAnchor.constraint(equalTo: container.centerYAnchor),
-            nameLabel.trailingAnchor.constraint(equalTo: chevronImageView.leadingAnchor, constant: -8),
-            
-            chevronImageView.trailingAnchor.constraint(equalTo: container.trailingAnchor),
-            chevronImageView.centerYAnchor.constraint(equalTo: container.centerYAnchor),
-            chevronImageView.widthAnchor.constraint(equalToConstant: 12),
-            chevronImageView.heightAnchor.constraint(equalToConstant: 20)
-        ])
-        
-        let separator = UIView()
-        separator.backgroundColor = .systemGray5
-        separator.translatesAutoresizingMaskIntoConstraints = false
-        container.addSubview(separator)
-        
-        NSLayoutConstraint.activate([
-            separator.leadingAnchor.constraint(equalTo: container.leadingAnchor),
-            separator.trailingAnchor.constraint(equalTo: container.trailingAnchor),
-            separator.bottomAnchor.constraint(equalTo: container.bottomAnchor),
-            separator.heightAnchor.constraint(equalToConstant: 0.5)
-        ])
-        
-        return container
+}
+
+extension DocumentView: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return documents.count
     }
     
-    @objc private func handleDocumentTap(_ gesture: UITapGestureRecognizer) {
-        guard let container = gesture.view,
-              let index = container.viewWithTag(container.tag)?.tag else { return }
-        
-        guard index < documents.count else { return }
-        let document = documents[index]
-        
-        if let url = URL(string: document.url) {
-            print("download and show image of document \(url)")
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: DocumentCell.identifier, for: indexPath) as? DocumentCell else {
+            return UITableViewCell()
         }
+        
+        let document = documents[indexPath.row]
+        cell.configure(with: document)
+        return cell
+    }
+}
+
+extension DocumentView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 56
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let document = documents[indexPath.row]
+        let viewerVC = DocumentViewerViewController(document: document)
+        viewerVC.modalPresentationStyle = .fullScreen
+        
+        parentViewController?.present(viewerVC, animated: true)
     }
 }

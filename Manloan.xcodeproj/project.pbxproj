@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5576DCA30364A7A007F1727 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B5576DC930364A7A007F1727 /* Kingfisher */; };
+		B5576DCC30364ADE007F1727 /* DocumentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5576DCB30364ADE007F1727 /* DocumentCell.swift */; };
+		B5576DCE30364AF4007F1727 /* DocumentViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5576DCD30364AF4007F1727 /* DocumentViewerViewController.swift */; };
 		B5AD54A03035B9830015EE31 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B5AD549F3035B9830015EE31 /* Alamofire */; };
 		B5AD54A33035B9A20015EE31 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = B5AD54A23035B9A20015EE31 /* Swinject */; };
 		B5AD54CC3035C0900015EE31 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD54CA3035C0350015EE31 /* Constants.swift */; };
@@ -61,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B5576DCB30364ADE007F1727 /* DocumentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentCell.swift; sourceTree = "<group>"; };
+		B5576DCD30364AF4007F1727 /* DocumentViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewerViewController.swift; sourceTree = "<group>"; };
 		B5AD546A3035B7D70015EE31 /* Manloan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Manloan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AD54803035B7D80015EE31 /* ManloanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManloanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AD548A3035B7D80015EE31 /* ManloanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManloanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5576DCA30364A7A007F1727 /* Kingfisher in Frameworks */,
 				B5AD54A03035B9830015EE31 /* Alamofire in Frameworks */,
 				B5AD54A33035B9A20015EE31 /* Swinject in Frameworks */,
 			);
@@ -348,6 +354,7 @@
 		B5AD55593035F8800015EE31 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				B5576DCD30364AF4007F1727 /* DocumentViewerViewController.swift */,
 				B5AD5564303608680015EE31 /* LoanDetailViewController.swift */,
 			);
 			path = ViewController;
@@ -366,6 +373,7 @@
 		B5AD55663036087F0015EE31 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B5576DCB30364ADE007F1727 /* DocumentCell.swift */,
 				B5AD5571303609190015EE31 /* DocumentView.swift */,
 				B5AD556F303609100015EE31 /* PaymentScheduleView.swift */,
 				B5AD556D303609070015EE31 /* RepaymentProgressView.swift */,
@@ -403,6 +411,7 @@
 			packageProductDependencies = (
 				B5AD549F3035B9830015EE31 /* Alamofire */,
 				B5AD54A23035B9A20015EE31 /* Swinject */,
+				B5576DC930364A7A007F1727 /* Kingfisher */,
 			);
 			productName = Manloan;
 			productReference = B5AD546A3035B7D70015EE31 /* Manloan.app */;
@@ -490,6 +499,7 @@
 			packageReferences = (
 				B5AD549E3035B9830015EE31 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				B5AD54A13035B9A20015EE31 /* XCRemoteSwiftPackageReference "Swinject" */,
+				B5576DC830364A7A007F1727 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B5AD546B3035B7D70015EE31 /* Products */;
@@ -535,6 +545,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5AD55313035D13F0015EE31 /* FilterLoansUseCase.swift in Sources */,
+				B5576DCE30364AF4007F1727 /* DocumentViewerViewController.swift in Sources */,
 				B5AD54CC3035C0900015EE31 /* Constants.swift in Sources */,
 				B5AD54CE3035C0F50015EE31 /* EmptyStateView.swift in Sources */,
 				B5AD556A303608950015EE31 /* BorrowerInfoView.swift in Sources */,
@@ -564,6 +575,7 @@
 				B5AD55293035C4C50015EE31 /* AppDelegate.swift in Sources */,
 				B5AD552A3035C4C50015EE31 /* SceneDelegate.swift in Sources */,
 				B5AD54CD3035C0C40015EE31 /* LoanListViewController.swift in Sources */,
+				B5576DCC30364ADE007F1727 /* DocumentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -924,6 +936,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		B5576DC830364A7A007F1727 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.11.0;
+			};
+		};
 		B5AD549E3035B9830015EE31 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -943,6 +963,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B5576DC930364A7A007F1727 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B5576DC830364A7A007F1727 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		B5AD549F3035B9830015EE31 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B5AD549E3035B9830015EE31 /* XCRemoteSwiftPackageReference "Alamofire" */;
