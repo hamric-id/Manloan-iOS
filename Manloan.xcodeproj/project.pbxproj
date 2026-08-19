@@ -9,6 +9,30 @@
 /* Begin PBXBuildFile section */
 		B5AD54A03035B9830015EE31 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B5AD549F3035B9830015EE31 /* Alamofire */; };
 		B5AD54A33035B9A20015EE31 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = B5AD54A23035B9A20015EE31 /* Swinject */; };
+		B5AD54CC3035C0900015EE31 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD54CA3035C0350015EE31 /* Constants.swift */; };
+		B5AD54CD3035C0C40015EE31 /* LoanListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD54C53035BFA90015EE31 /* LoanListViewController.swift */; };
+		B5AD54CE3035C0F50015EE31 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD54C23035BF5B0015EE31 /* EmptyStateView.swift */; };
+		B5AD54CF3035C0F50015EE31 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD54B13035BDCD0015EE31 /* NetworkManager.swift */; };
+		B5AD54D03035C0F50015EE31 /* LoanRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD54BB3035BEEB0015EE31 /* LoanRepository.swift */; };
+		B5AD54D13035C0F50015EE31 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD54AD3035BD070015EE31 /* NetworkError.swift */; };
+		B5AD54D23035C0F50015EE31 /* LoanDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD54B43035BE540015EE31 /* LoanDTO.swift */; };
+		B5AD54D33035C0F50015EE31 /* LoanRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD54B73035BE880015EE31 /* LoanRepositoryProtocol.swift */; };
+		B5AD54D43035C0F50015EE31 /* LoanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD54C13035BF4E0015EE31 /* LoanCell.swift */; };
+		B5AD54D53035C0F50015EE31 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD54C33035BF670015EE31 /* FilterView.swift */; };
+		B5AD54D63035C0F50015EE31 /* FetchLoansUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD54B63035BE6F0015EE31 /* FetchLoansUseCase.swift */; };
+		B5AD54D73035C0F50015EE31 /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD54B53035BE610015EE31 /* Loan.swift */; };
+		B5AD54D83035C0F50015EE31 /* LoanListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD54BF3035BF1B0015EE31 /* LoanListViewModel.swift */; };
+		B5AD54D93035C0F50015EE31 /* LoanRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD54BA3035BEBF0015EE31 /* LoanRemoteDataSource.swift */; };
+		B5AD54DA3035C0F50015EE31 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD54B03035BDBA0015EE31 /* NetworkLogger.swift */; };
+		B5AD55243035C4C50015EE31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5AD551C3035C4C50015EE31 /* Assets.xcassets */; };
+		B5AD55263035C4C50015EE31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AD551F3035C4C50015EE31 /* LaunchScreen.storyboard */; };
+		B5AD55283035C4C50015EE31 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD55173035C4C50015EE31 /* AppContainer.swift */; };
+		B5AD55293035C4C50015EE31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD55193035C4C50015EE31 /* AppDelegate.swift */; };
+		B5AD552A3035C4C50015EE31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD551A3035C4C50015EE31 /* SceneDelegate.swift */; };
+		B5AD552D3035D0480015EE31 /* SortLoansUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD552C3035D0410015EE31 /* SortLoansUseCase.swift */; };
+		B5AD552F3035D0550015EE31 /* SeachLoansUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD552E3035D0550015EE31 /* SeachLoansUseCase.swift */; };
+		B5AD55313035D13F0015EE31 /* FilterLoansUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD55303035D1390015EE31 /* FilterLoansUseCase.swift */; };
+		B5AD55333035D1590015EE31 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD55323035D1590015EE31 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,29 +56,49 @@
 		B5AD546A3035B7D70015EE31 /* Manloan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Manloan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AD54803035B7D80015EE31 /* ManloanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManloanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AD548A3035B7D80015EE31 /* ManloanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManloanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5AD54AD3035BD070015EE31 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		B5AD54B03035BDBA0015EE31 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		B5AD54B13035BDCD0015EE31 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B5AD54B43035BE540015EE31 /* LoanDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanDTO.swift; sourceTree = "<group>"; };
+		B5AD54B53035BE610015EE31 /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
+		B5AD54B63035BE6F0015EE31 /* FetchLoansUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchLoansUseCase.swift; sourceTree = "<group>"; };
+		B5AD54B73035BE880015EE31 /* LoanRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanRepositoryProtocol.swift; sourceTree = "<group>"; };
+		B5AD54BA3035BEBF0015EE31 /* LoanRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanRemoteDataSource.swift; sourceTree = "<group>"; };
+		B5AD54BB3035BEEB0015EE31 /* LoanRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanRepository.swift; sourceTree = "<group>"; };
+		B5AD54BF3035BF1B0015EE31 /* LoanListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanListViewModel.swift; sourceTree = "<group>"; };
+		B5AD54C13035BF4E0015EE31 /* LoanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanCell.swift; sourceTree = "<group>"; };
+		B5AD54C23035BF5B0015EE31 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		B5AD54C33035BF670015EE31 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		B5AD54C53035BFA90015EE31 /* LoanListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanListViewController.swift; sourceTree = "<group>"; };
+		B5AD54CA3035C0350015EE31 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B5AD55173035C4C50015EE31 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		B5AD55193035C4C50015EE31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B5AD551A3035C4C50015EE31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B5AD551C3035C4C50015EE31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5AD551D3035C4C50015EE31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5AD551E3035C4C50015EE31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B5AD552C3035D0410015EE31 /* SortLoansUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortLoansUseCase.swift; sourceTree = "<group>"; };
+		B5AD552E3035D0550015EE31 /* SeachLoansUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachLoansUseCase.swift; sourceTree = "<group>"; };
+		B5AD55303035D1390015EE31 /* FilterLoansUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterLoansUseCase.swift; sourceTree = "<group>"; };
+		B5AD55323035D1590015EE31 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		B5AD54923035B7D80015EE31 /* Exceptions for "Manloan" folder in "Manloan" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		B5AD55473035D7AD0015EE31 /* Exceptions for "ManloanTests" folder in "Compile Sources" phase from "ManloanTests" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = B5AD547C3035B7D80015EE31 /* Sources */;
 			membershipExceptions = (
-				Info.plist,
+				"ManloanTests-Bridging-Header.h",
 			);
-			target = B5AD54693035B7D70015EE31 /* Manloan */;
 		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		B5AD546C3035B7D70015EE31 /* Manloan */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				B5AD54923035B7D80015EE31 /* Exceptions for "Manloan" folder in "Manloan" target */,
-			);
-			path = Manloan;
-			sourceTree = "<group>";
-		};
 		B5AD54833035B7D80015EE31 /* ManloanTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B5AD55473035D7AD0015EE31 /* Exceptions for "ManloanTests" folder in "Compile Sources" phase from "ManloanTests" target */,
+			);
 			path = ManloanTests;
 			sourceTree = "<group>";
 		};
@@ -95,13 +139,10 @@
 		B5AD54613035B7D70015EE31 = {
 			isa = PBXGroup;
 			children = (
-				B5AD54AB3035BAA30015EE31 /* Data */,
-				B5AD54A73035BA420015EE31 /* Domain */,
-				B5AD54A43035BA020015EE31 /* Core */,
-				B5AD546C3035B7D70015EE31 /* Manloan */,
 				B5AD54833035B7D80015EE31 /* ManloanTests */,
 				B5AD548D3035B7D80015EE31 /* ManloanUITests */,
 				B5AD546B3035B7D70015EE31 /* Products */,
+				B5AD55233035C4C50015EE31 /* Manloan */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,7 +159,6 @@
 		B5AD54A43035BA020015EE31 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				B5AD54A63035BA1F0015EE31 /* Utilities */,
 				B5AD54A53035BA170015EE31 /* Networking */,
 			);
 			path = Core;
@@ -127,15 +167,11 @@
 		B5AD54A53035BA170015EE31 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				B5AD54B13035BDCD0015EE31 /* NetworkManager.swift */,
+				B5AD54B03035BDBA0015EE31 /* NetworkLogger.swift */,
+				B5AD54AD3035BD070015EE31 /* NetworkError.swift */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		B5AD54A63035BA1F0015EE31 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utilities;
 			sourceTree = "<group>";
 		};
 		B5AD54A73035BA420015EE31 /* Domain */ = {
@@ -151,6 +187,7 @@
 		B5AD54A83035BA600015EE31 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				B5AD54B53035BE610015EE31 /* Loan.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -158,6 +195,7 @@
 		B5AD54A93035BA690015EE31 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				B5AD54B73035BE880015EE31 /* LoanRepositoryProtocol.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -165,6 +203,10 @@
 		B5AD54AA3035BA730015EE31 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				B5AD55303035D1390015EE31 /* FilterLoansUseCase.swift */,
+				B5AD552E3035D0550015EE31 /* SeachLoansUseCase.swift */,
+				B5AD552C3035D0410015EE31 /* SortLoansUseCase.swift */,
+				B5AD54B63035BE6F0015EE31 /* FetchLoansUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -172,6 +214,8 @@
 		B5AD54AB3035BAA30015EE31 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B5AD54B93035BEB80015EE31 /* DataSources */,
+				B5AD54B23035BE170015EE31 /* DTOs */,
 				B5AD54AC3035BAA90015EE31 /* Repositories */,
 			);
 			path = Data;
@@ -180,8 +224,113 @@
 		B5AD54AC3035BAA90015EE31 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				B5AD54BB3035BEEB0015EE31 /* LoanRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		B5AD54B23035BE170015EE31 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				B5AD54B43035BE540015EE31 /* LoanDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		B5AD54B93035BEB80015EE31 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				B5AD54BA3035BEBF0015EE31 /* LoanRemoteDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		B5AD54BC3035BEFB0015EE31 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				B5AD54C93035C02F0015EE31 /* Common */,
+				B5AD54BD3035BF040015EE31 /* LoanList */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		B5AD54BD3035BF040015EE31 /* LoanList */ = {
+			isa = PBXGroup;
+			children = (
+				B5AD54C43035BFA30015EE31 /* ViewController */,
+				B5AD54C03035BF430015EE31 /* Views */,
+				B5AD54BE3035BF0E0015EE31 /* ViewModel */,
+			);
+			name = LoanList;
+			path = Manloan/Presentation/LoanList;
+			sourceTree = SOURCE_ROOT;
+		};
+		B5AD54BE3035BF0E0015EE31 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B5AD54BF3035BF1B0015EE31 /* LoanListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B5AD54C03035BF430015EE31 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B5AD55323035D1590015EE31 /* LoadingView.swift */,
+				B5AD54C33035BF670015EE31 /* FilterView.swift */,
+				B5AD54C23035BF5B0015EE31 /* EmptyStateView.swift */,
+				B5AD54C13035BF4E0015EE31 /* LoanCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B5AD54C43035BFA30015EE31 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B5AD54C53035BFA90015EE31 /* LoanListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B5AD54C93035C02F0015EE31 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B5AD54CA3035C0350015EE31 /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B5AD55183035C4C50015EE31 /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				B5AD55173035C4C50015EE31 /* AppContainer.swift */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
+		B5AD551B3035C4C50015EE31 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B5AD55183035C4C50015EE31 /* DependencyInjection */,
+				B5AD55193035C4C50015EE31 /* AppDelegate.swift */,
+				B5AD551A3035C4C50015EE31 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B5AD55233035C4C50015EE31 /* Manloan */ = {
+			isa = PBXGroup;
+			children = (
+				B5AD551B3035C4C50015EE31 /* Application */,
+				B5AD551C3035C4C50015EE31 /* Assets.xcassets */,
+				B5AD551D3035C4C50015EE31 /* Info.plist */,
+				B5AD551F3035C4C50015EE31 /* LaunchScreen.storyboard */,
+				B5AD54BC3035BEFB0015EE31 /* Presentation */,
+				B5AD54A43035BA020015EE31 /* Core */,
+				B5AD54AB3035BAA30015EE31 /* Data */,
+				B5AD54A73035BA420015EE31 /* Domain */,
+			);
+			path = Manloan;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,9 +347,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				B5AD546C3035B7D70015EE31 /* Manloan */,
 			);
 			name = Manloan;
 			packageProductDependencies = (
@@ -272,6 +418,7 @@
 					};
 					B5AD547F3035B7D80015EE31 = {
 						CreatedOnToolsVersion = 26.6;
+						LastSwiftMigration = 2660;
 						TestTargetID = B5AD54693035B7D70015EE31;
 					};
 					B5AD54893035B7D80015EE31 = {
@@ -310,6 +457,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5AD55243035C4C50015EE31 /* Assets.xcassets in Resources */,
+				B5AD55263035C4C50015EE31 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +483,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5AD55313035D13F0015EE31 /* FilterLoansUseCase.swift in Sources */,
+				B5AD54CC3035C0900015EE31 /* Constants.swift in Sources */,
+				B5AD54CE3035C0F50015EE31 /* EmptyStateView.swift in Sources */,
+				B5AD55333035D1590015EE31 /* LoadingView.swift in Sources */,
+				B5AD552D3035D0480015EE31 /* SortLoansUseCase.swift in Sources */,
+				B5AD54CF3035C0F50015EE31 /* NetworkManager.swift in Sources */,
+				B5AD54D03035C0F50015EE31 /* LoanRepository.swift in Sources */,
+				B5AD54D13035C0F50015EE31 /* NetworkError.swift in Sources */,
+				B5AD552F3035D0550015EE31 /* SeachLoansUseCase.swift in Sources */,
+				B5AD54D23035C0F50015EE31 /* LoanDTO.swift in Sources */,
+				B5AD54D33035C0F50015EE31 /* LoanRepositoryProtocol.swift in Sources */,
+				B5AD54D43035C0F50015EE31 /* LoanCell.swift in Sources */,
+				B5AD54D53035C0F50015EE31 /* FilterView.swift in Sources */,
+				B5AD54D63035C0F50015EE31 /* FetchLoansUseCase.swift in Sources */,
+				B5AD54D73035C0F50015EE31 /* Loan.swift in Sources */,
+				B5AD54D83035C0F50015EE31 /* LoanListViewModel.swift in Sources */,
+				B5AD54D93035C0F50015EE31 /* LoanRemoteDataSource.swift in Sources */,
+				B5AD54DA3035C0F50015EE31 /* NetworkLogger.swift in Sources */,
+				B5AD55283035C4C50015EE31 /* AppContainer.swift in Sources */,
+				B5AD55293035C4C50015EE31 /* AppDelegate.swift in Sources */,
+				B5AD552A3035C4C50015EE31 /* SceneDelegate.swift in Sources */,
+				B5AD54CD3035C0C40015EE31 /* LoanListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +537,17 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		B5AD551F3035C4C50015EE31 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5AD551E3035C4C50015EE31 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		B5AD54943035B7D80015EE31 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -379,7 +561,6 @@
 				INFOPLIST_FILE = Manloan/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -411,7 +592,6 @@
 				INFOPLIST_FILE = Manloan/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -556,6 +736,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VTA7YX2JGG;
@@ -567,6 +748,8 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "ManloanTests/ManloanTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -578,6 +761,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VTA7YX2JGG;
@@ -589,6 +773,7 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "ManloanTests/ManloanTests-Bridging-Header.h";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
