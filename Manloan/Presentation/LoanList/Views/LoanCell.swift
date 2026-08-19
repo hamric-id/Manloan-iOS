@@ -115,7 +115,7 @@ final class LoanCell: UITableViewCell {
     
     func configure(with loan: Loan) {
         nameLabel.text = loan.borrower.name
-        amountLabel.text = loan.formattedAmount
+        amountLabel.text = loan.amount.asUSDcurrency
         detailsLabel.text = "\(loan.formattedInterestRate) Interest • \(loan.term) months"
         purposeLabel.text = loan.purpose
         

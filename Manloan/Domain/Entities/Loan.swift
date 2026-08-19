@@ -20,10 +20,6 @@ struct Loan: Identifiable, Equatable {
     let documents: [Document]
     let repaymentSchedule: RepaymentSchedule
     
-    var formattedAmount: String {
-        return String(format: "$%.2f", amount)
-    }
-    
     var formattedInterestRate: String {
         return String(format: "%.1f%%", interestRate * 100)
     }
@@ -69,10 +65,6 @@ struct Borrower: Equatable {
 struct Collateral: Equatable {
     let type: String
     let value: Double
-    
-    var formattedValue: String {
-        return String(format: "$%.2f", value)
-    }
 }
 
 struct Document: Identifiable, Equatable {

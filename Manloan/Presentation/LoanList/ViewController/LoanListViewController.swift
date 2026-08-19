@@ -252,7 +252,8 @@ extension LoanListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let loan = viewModel.loan(at: indexPath.row)
-        print("Selected loan: \(loan.borrower.name)")
+        let detailVC = LoanDetailViewController(loan: loan)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
