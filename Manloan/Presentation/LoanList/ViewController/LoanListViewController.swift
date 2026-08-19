@@ -121,13 +121,6 @@ final class LoanListViewController: UIViewController {
         
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
-        
-        let refreshBarButton = UIBarButtonItem(
-            barButtonSystemItem: .refresh,
-            target: self,
-            action: #selector(handleRefresh)
-        )
-        navigationItem.rightBarButtonItem = refreshBarButton
 
         view.addSubview(filterView)
         view.addSubview(tableView)
