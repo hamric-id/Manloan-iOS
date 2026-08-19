@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B5AD54A03035B9830015EE31 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B5AD549F3035B9830015EE31 /* Alamofire */; };
+		B5AD54A33035B9A20015EE31 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = B5AD54A23035B9A20015EE31 /* Swinject */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		B5AD54813035B7D80015EE31 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -65,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5AD54A03035B9830015EE31 /* Alamofire in Frameworks */,
+				B5AD54A33035B9A20015EE31 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +95,9 @@
 		B5AD54613035B7D70015EE31 = {
 			isa = PBXGroup;
 			children = (
+				B5AD54AB3035BAA30015EE31 /* Data */,
+				B5AD54A73035BA420015EE31 /* Domain */,
+				B5AD54A43035BA020015EE31 /* Core */,
 				B5AD546C3035B7D70015EE31 /* Manloan */,
 				B5AD54833035B7D80015EE31 /* ManloanTests */,
 				B5AD548D3035B7D80015EE31 /* ManloanUITests */,
@@ -103,6 +113,75 @@
 				B5AD548A3035B7D80015EE31 /* ManloanUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B5AD54A43035BA020015EE31 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B5AD54A63035BA1F0015EE31 /* Utilities */,
+				B5AD54A53035BA170015EE31 /* Networking */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B5AD54A53035BA170015EE31 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B5AD54A63035BA1F0015EE31 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B5AD54A73035BA420015EE31 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B5AD54AA3035BA730015EE31 /* UseCases */,
+				B5AD54A93035BA690015EE31 /* Repositories */,
+				B5AD54A83035BA600015EE31 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B5AD54A83035BA600015EE31 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		B5AD54A93035BA690015EE31 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		B5AD54AA3035BA730015EE31 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		B5AD54AB3035BAA30015EE31 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B5AD54AC3035BAA90015EE31 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B5AD54AC3035BAA90015EE31 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +204,8 @@
 			);
 			name = Manloan;
 			packageProductDependencies = (
+				B5AD549F3035B9830015EE31 /* Alamofire */,
+				B5AD54A23035B9A20015EE31 /* Swinject */,
 			);
 			productName = Manloan;
 			productReference = B5AD546A3035B7D70015EE31 /* Manloan.app */;
@@ -208,6 +289,10 @@
 			);
 			mainGroup = B5AD54613035B7D70015EE31;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B5AD549E3035B9830015EE31 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				B5AD54A13035B9A20015EE31 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B5AD546B3035B7D70015EE31 /* Products */;
 			projectDirPath = "";
@@ -591,6 +676,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B5AD549E3035B9830015EE31 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.12.0;
+			};
+		};
+		B5AD54A13035B9A20015EE31 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B5AD549F3035B9830015EE31 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B5AD549E3035B9830015EE31 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		B5AD54A23035B9A20015EE31 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B5AD54A13035B9A20015EE31 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B5AD54623035B7D70015EE31 /* Project object */;
 }
