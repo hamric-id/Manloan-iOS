@@ -20,22 +20,22 @@ iOS application that allows users to view and manage loan details
 
 ## 🚀 Additional Feature (for enhance user experience):
 1. Loan List Screen: 
-    -filter
-    -sort
-    -search
-    -pull to refresh
-    -loading animation when data fetching
+    - filter
+    - sort
+    - search
+    - pull to refresh
+    - loading animation when data fetching
     
 2. Loan Detail Screen: 
-    -repayment progress(paid, percentage paid/amount)
-    -data propagation from Loan List Screen (not re-fetch from API endpoint) to reducing reliance on the internet
-    -smooth animation on progress bar of percentage paid/amount
-    -auto hide collateral section if no collateral item
-    -summary card (amount, interest rate, term, purpose, risk rating)
-    -send email (to borrower to remind with pre filled subject and body)
-    -share loan detail via other app (WA, Telegram, etc)
+    - repayment progress(paid, percentage paid/amount)
+    - data propagation from Loan List Screen (not re-fetch from API endpoint) to reducing reliance on the internet
+    - smooth animation on progress bar of percentage paid/amount
+    - auto hide collateral section if no collateral item
+    - summary card (amount, interest rate, term, purpose, risk rating)
+    - send email (to borrower to remind with pre filled subject and body)
+    - share loan detail via other app (WA, Telegram, etc)
     
 3. Loan Document Screen: 
-    -preload image before showing image (for prevent lagging when first zooming)
-    -loading animation when image loading
-    -swipe down to dismiss
+    - preload image before showing image (for prevent lagging when first zooming)
+    - loading animation when image loading
+    - swipe down to dismiss
